@@ -1,0 +1,86 @@
+{% extends 'core/base.html' %}
+{% load static%}
+{% block content %}
+
+
+<section class="carrusel">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/Furry-kitten-white-black_1920x1080.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="uwu">
+                <h2>FUNDACION BIG FLOPPA</h2>
+                <h5>Obten un 5% de descuento en todas tus compras suscribiendote</h5>
+              </div>
+            </div>
+        </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/Furry-kitten-white-black_1920x1080.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="uwu">
+              <h2>PRODUCTOS CERTIFICADOS</h2>
+              <h5>Trabajamos con los mejores productos para ofrecer el mejor servicio a nuestros clientes</h5>
+            </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/ZJ7J3APDKNGTXPTWS6H2EKCUKU.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="uwu">
+              <h2>PUNTO DE ADOPCION DE MASCOTAS</h2>
+              <h5>Contamos con una sucursal con productos para tus mascotas y adopciones</h5>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </section>
+  <H1>Alguno de nuestros productos:</h1>
+  <section class="medio">
+    <article id="catalogo">
+      <div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'images/catalogo5.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">COLLAR PAN</h5>
+              <p class="card-text">Collar pan y otros diseños</p>
+              <a href="{% url 'productos' %}" class="btn btn-primary">VER PRODUCTOS</a>
+            </div>
+          </div>
+      </div>
+
+    <div>
+      <div class="card" style="width: 18rem;">
+          <img src="{% static 'images/71EtseYNKgL.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ARNES PERRO COLOR ROSA</h5>
+            <p>Arnes para mascotas razas pequeñas y grandes</p>
+            <a href="{% url 'productos' %}" class="btn btn-primary">VER PRODUCTOS</a>
+          </div>
+        </div>
+      </div>
+    
+      <div>
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'images/Collar-con-colgante-de-flores-para-mascotas-Correa-con-campana-para-el-cuello-accesorios-para-gatos.jpg_Q90.jpg_.webp' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">COLLAR CON COLGANTE PARA MASCOTAS</h5>
+              <p>Hermoso collar de flores con colgante variedades</p>
+              <a href="{% url 'productos' %}" class="btn btn-primary">VER PRODUCTOS</a>
+            </div>
+          </div>
+      </div>
+     </article>
+</section>  
+{% endblock content %}
+

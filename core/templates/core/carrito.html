@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="catalogo">
+        <h1>Carrito de compras</h1>
+    </section>
+    <section id="catalogo">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Imagen</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in carro %}
+                    <tr>
+                        <td>{{ item.1 }}</td>
+                        <td><img id="imagen-tabla" src="{{ item.2 }}"></td>
+                        <td>{{ item.3 }}</td>
+                        <td>{{ item.4 }}</td>
+                        <td>{{ item.5 }}</td>
+                        <td>
+                            <a href="{% url 'dropitem' item.0 %}">
+                                <img src="{% static 'images/icons8_erase_30px.png' %}" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    
+    {% if not carro %}
+        <h2 style="width: 100%; text-align: center">¡Tu carrito está vacío!</h2>
+    {% else %}
+        {% if insufficient_stock %}
+            <h2 style="width: 100%; text-align: center; color: red;">¡El stock es insuficiente para completar la compra!</h2>
+        {% endif %}
+        <section id="catalogo">
+            <h5>Descuento 5% a usuarios registrados</h5>
+        </section>
+        <div class="comprar">
+            <a id="comprar" href="{% url 'productos' %}">Volver</a>
+            <a id="comprar" href="{% url 'comprar' %}">Comprar</a>
+        </div>
+    {% endif %}
+{% endblock %}

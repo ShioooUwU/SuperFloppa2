@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section id="ventas">
+        <h1>Detalle de Venta:</h1>
+    </section>
+    <section id="ventas">
+        <h2>ID de Venta: {{ venta.id }}</h2>
+    </section>
+    <section id="ventas">
+        <h2>Fecha de la venta: {{ venta.fecha}} </h2>
+    </section>
+    <section id="ventas">
+        <h2>Cliente: {{ venta.cliente}} </h2>
+    </section>
+    <section id="ventas">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    
+                    
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+        {% for item in detalle %}
+            <tr>
+            
+            <td>{{ item.producto }}</td>
+            <td>{{ item.precio }}</td>
+            <td>{{ item.cantidad }}</td>  
+            
+            </tr>
+        {% endfor %}
+            
+            </tbody>
+        </table>
+        
+    </section>
+    <section id="ventas">
+        <h2> Codigo de seguimiento: {{seguimiento.nro_seguimiento}}</h2>
+    </section>
+    <section id="ventas">
+        <h2> Estado de envio: {{seguimiento.estado}}</h2>
+    </section>
+
+{% endblock content %}

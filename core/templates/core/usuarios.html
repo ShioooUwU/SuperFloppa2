@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+{% for p in producto %}
+
+   
+</div>
+      <div class="card" style="width: 18rem;">
+        <img style="height: 250px; width: 250px;" src="{{p.imagen}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><span>{{p.descripcion}}</span></h5>
+          <p>Stock: <span>{{p.stock}}</span> disponibles</p>
+          <p>Valor: ${{p.precio}}</p>
+          {% if p.oferta == True %}
+
+          <p>Valor usuario: <strong style="font-size: 20px; color: red;">{{ p.tachado }}</strong></p>
+
+          {% endif %} 
+          <div id="agregar">
+            <a id="boton-catalogo" href="{% url 'addtocar' p.codigo %}" onclick="validarStock1()">
+             Agregar al carrito
+            </a>
+           
+          </div>
+        </div>
+      </div>
+  {% endfor %}    
+
+{% endblock %}

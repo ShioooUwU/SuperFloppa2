@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+        <section id="ventas">
+            <h1>Historial de compras</h1>
+        </section>
+        <section id="ventas">
+            
+            <table id="tabla">
+                <thead>
+                    <tr>
+                        
+                        <th>Id</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Total</th>
+                        <th>Detalle y seguimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for v in venta %}
+
+                           {% if user == v.cliente %}
+                            <tr> 
+
+                                <td>{{v.id}}</td>
+                                <td>{{v.fecha}}</td>
+                                <td>{{v.cliente}}</td>
+                                <td>${{v.total}}</td>
+                                <td><a href="{% url 'detalle_venta' v.id %}"><img src="{% static 'images/detalle.png'%}"></a></td>
+                            </tr>
+                            {%endif%}
+                           
+                      
+                    {% endfor %}
+
+                </tbody>
+            </table>
+            
+        </section>
+    {% endblock %}

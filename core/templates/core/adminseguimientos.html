@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Administración de Seguimientos</h1>
+    
+<table>
+    <thead>
+        <tr>
+            <th>Número de Seguimiento</th>
+            <th>ID de Venta</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for seguimiento in seguimientos %}
+        <tr>
+            <td>{{ seguimiento.nro_seguimiento }}</td>
+            <td>{{ seguimiento.id.id }}</td>
+            <td>{{ seguimiento.estado }}</td>
+            <td>
+                <a href="{% url 'modificar_seguimiento' nro_seguimiento=seguimiento.nro_seguimiento %}">Modificar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+   
+
+{% endblock content %}

@@ -1,0 +1,349 @@
+header{
+    display: flex;
+    flex-direction: column;
+}
+html{
+  height: 100%;
+}
+footer{
+  margin-top: auto;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #EAEDD4;
+  font-family: Arial, sans-serif;
+}
+#ventas{
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+}
+#tabla{
+  width: 800px;
+  border: 1px solid black;
+}
+table{
+  border-collapse: collapse;
+}
+
+#agregar{
+  
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+
+}
+#boton-catalogo{
+  color: white;
+  font-style: italic;
+  justify-content: center;
+  background-color: #95ca9f;
+  height: 50px;
+  width: 150px;
+  border: 2px #bfdaa7 solid;
+  border-radius: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #0000EE;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+#comprar{
+  
+  color: white;
+  height: 50px;
+  width: 150px;
+  background-color: #5d662d;
+  align-items: center;
+  justify-content: center;
+  border: 2px #000 solid;
+  border-radius: 5px;
+}
+
+.comprar{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+#imagen-tabla{
+  height: 240px;
+  width: 240px;
+}
+th, td {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+  border: 5px solid #5d662d;
+  border-radius: 1px;
+}
+.carrusel{
+    margin-top: 20px;
+    padding: 0% 20% 5% 20%;
+}
+
+
+#catalogo{
+ 
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: flex;
+  column-gap: 40px;
+  justify-content: space-evenly;
+  margin-bottom: 2px;
+}
+
+
+
+#articulos{
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  justify-content: space-evenly;
+  row-gap: 110px;
+  margin-bottom: 20px;
+  padding: 5px;
+ 
+}
+
+#register{
+  padding: 5%;
+}
+
+#registro {
+  margin-bottom: 20px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 600px;
+  border: 10px #5d662d solid;
+  border-radius: 20px;
+}
+#agregarp{
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 600px;
+  margin-right: 600px;
+  border: 10px #5d662d solid;
+  border-radius: 20px;
+}
+
+#login {
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  border: 10px #5d662d solid;
+  border-radius: 20px;
+}
+#log{  
+  padding: 5%;
+}
+.uwu{
+  color: #1a1f25;
+  border: 1px #78c7bb solid;
+    padding: 8px 15px;
+    border-radius: 25px;
+    color: white; 
+  background: linear-gradient(to bottom, transparent 10%, #edd4d4);
+}
+.medio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 5% 1% 5%;
+}
+.barra-final{
+    display: flex;
+    justify-content: space-evenly;
+    background:linear-gradient(to right,#bfdaa7 70% ,#95ca9f  );
+    height: 120px;
+    align-items: center;
+    font-size: smaller;
+    color: white;
+
+}
+.barra-final-2{
+    display: flex;
+    justify-content: space-evenly;
+    background:linear-gradient(to right,#bfdaa7 70% ,#95ca9f );
+    height: 120px;
+    align-items: center;
+    font-size: smaller;
+    color: white;
+}
+
+.card{
+    background:#5d662d;
+    color: white;
+    padding: 1%;
+    height: 530px;
+
+  }
+.lol{
+  color: #14151c;
+}
+
+#navline{
+    min-height: 20px;
+    background:linear-gradient(to right,#bfdaa7 70% ,#95ca9f  );  
+
+}
+#line{
+    min-height: 20px;
+    background:transparent;   
+}
+.h2{
+  color: black;
+}
+#suscripcion {
+  text-align: center;
+}
+
+#formsuscribir {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid #5d662d;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
+.success-message {
+  margin-bottom: 20px;
+  color: green;
+}
+
+.benefits {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5d662d;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3c421b;
+}
+
+small {
+  color: gray;
+}
+
+
+  .card{
+    background:#5d662d;
+    color: white;
+    padding: 1%;
+    height: 530px;
+
+  }
+
+  
+
+@media (max-width: 700px){
+             table {
+                  font-size: 14px;
+              }
+
+              th, td {
+                  padding: 8px;
+              }
+
+              .btn {
+                  padding: 6px 10px;
+}
+            .contenido-encabezado{
+                background-color: mistyrose;
+                transition-duration: 2s;
+                padding: 0px 20px;
+                flex-direction: column;
+                height: 220px;
+                transition-duration: 1s;
+            }
+            #articulos{
+              transition-duration: 2s;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+           
+             
+             }
+             .card{
+              padding: 5%;
+              margin-bottom: 15px;
+
+             }
+            .barra-final{
+              background-color: mistyrose;
+                transition-duration: 2s;
+                padding: 0px 20px;
+                flex-direction: column;
+                height: 250px;
+                transition-duration: 1s;
+                color:white
+
+            }
+           
+        }

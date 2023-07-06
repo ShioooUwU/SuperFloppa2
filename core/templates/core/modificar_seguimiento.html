@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<h1>Modificar Seguimiento</h1>
+    
+<form method="POST" action="{% url 'modificar_seguimiento' nro_seguimiento=seguimiento.nro_seguimiento %}">
+    {% csrf_token %}
+    
+    <div>
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" value="{{ seguimiento.estado }}">
+    </div>
+    
+    <button type="submit">Guardar Cambios</button>
+</form>
+
+<a href="{% url 'adminseguimientos' %}">Volver a la Administración de Seguimientos</a>
+
+
+
+{% endblock content %}
